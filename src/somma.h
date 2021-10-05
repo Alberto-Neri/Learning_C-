@@ -1,6 +1,8 @@
 #ifndef ADD_H
 #define ADD_H
 
-int somma(int a, int b);
-double somma(double a, double b);
+template <typename T>
+T somma(T a, T b){
+	return a+b;
+}
 #endif
