@@ -1,14 +1,7 @@
 #include "somma.h"
+#include "ask_function.h"
 #include <iostream>
 #include <string>
-
-struct favorite_things {
-	std::string team {};
-	std::string player {};
-};
-
-int askNumber();
-favorite_things ask_favorite_things();
 
 int main()
 {
@@ -28,21 +21,4 @@ int main()
 		
 	}
 	return 0;
-}
-
-int askNumber(){
-	std::string s {"inserisci un valore numerico:"}; 
-	std::cout << s << '\n';
-	int input {};
-	std::cin >> input;
-	return input; 
-}
-
-favorite_things ask_favorite_things(){
-	favorite_things ft {};
-	std::cout << "qual e' la tua squadra preferita?" << '\n';
-	std::getline(std::cin >> std::ws, ft.team);
-	std::cout << "qual e' il tuo giocatore preferito?" << '\n';
-	std::getline(std::cin >> std::ws, ft.player);
-	return ft; 
 }
