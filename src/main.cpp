@@ -5,6 +5,12 @@
 
 int main()
 {
+	int arr[] {1,2,3};
+	std::cout << arr << '\n';
+	int* arr_ptr{arr};
+	std::cout << arr_ptr << *arr_ptr << '\n';
+	*arr_ptr = 5;
+	std::cout << arr[0] << '\n';
 	std::cout << "digita 1 per somma, 2 per domande" << '\n';
 	int input = askNumber();
 	switch (input){
