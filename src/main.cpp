@@ -25,7 +25,7 @@ int main()
 		};
 		case 2: {
 			favorite_things ft {ask_favorite_things()};
-			std::cout << "hai detto che la tua squadra preferita e' " << ft.team << " e il tuo giocatore: " << ft.player; 
+			print_ft(ft); 
 			break;
 		}
 		

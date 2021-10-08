@@ -18,3 +18,8 @@ favorite_things ask_favorite_things(){
 	std::getline(std::cin >> std::ws, ft.player);
 	return ft; 
 }
+
+void print_ft(const favorite_things& ft){
+	std::cout << "hai detto che la tua squadra preferita e' " << ft.team << '\n';
+	std::cout << "e il tuo giocatore: " << ft.player;
+}
