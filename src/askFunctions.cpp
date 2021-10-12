@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "ask_function.h"
+#include <vector>
 
 int askNumber(){
 	std::string s {"inserisci un valore numerico:"}; 
@@ -22,4 +23,11 @@ favorite_things ask_favorite_things(){
 void print_ft(const favorite_things& ft){
 	std::cout << "hai detto che la tua squadra preferita e' " << ft.team << '\n';
 	std::cout << "e il tuo giocatore: " << ft.player;
+}
+
+void print_vect(const std::vector<int>& vect){
+	std::cout << "la dimensione del vettore e' " << vect.size() << ". Gli elementi sono: \n";
+	for (int elem : vect){
+		std::cout << elem << " ";
+	} 
 }

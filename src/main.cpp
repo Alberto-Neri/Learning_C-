@@ -15,7 +15,7 @@ int main()
 	std::cout << arr[0] << arr[1] << '\n';
 
 
-	std::cout << "digita 1 per somma, 2 per domande" << '\n';
+	std::cout << "digita 1 per somma, 2 per domande, 3 per vettore" << '\n';
 	int input = askNumber();
 	switch (input){
 		case 1: {
@@ -26,6 +26,17 @@ int main()
 		case 2: {
 			favorite_things ft {ask_favorite_things()};
 			print_ft(ft); 
+			break;
+		}; 
+		case 3: {
+			std::vector<int> vect; 
+			std::cout << "Inserisci gli elementi del vettore uno alla volta, 0 per terminare\n";
+			int n {askNumber()};
+			while (n != 0){
+				vect.push_back(n);
+				n = askNumber();
+			}
+			print_vect(vect);
 			break;
 		}
 		
