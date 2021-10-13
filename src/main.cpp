@@ -3,19 +3,23 @@
 #include <iostream>
 #include <string>
 
+class Persona {
+	std::string m_nome {};
+	int m_eta {};
+
+	public:
+		Persona(std::string nome, int eta)
+		: m_nome {nome}, m_eta {eta}
+		{}
+		void print(){
+			std::cout << "ti chiami " << m_nome << " e hai " << m_eta << " anni\n";
+		}
+
+};
+
 int main()
 {
-	int arr[] {1,2};
-	std::cout << arr << '\n';
-	int* arr_ptr{arr};
-	std::cout << arr_ptr << *arr_ptr << '\n';
-	std::cout << arr[0] << arr[1] << '\n';
-	*arr_ptr = 5;
-	*(arr + 1) = 6; //== arr[1] == 1[arr]
-	std::cout << arr[0] << arr[1] << '\n';
-
-
-	std::cout << "digita 1 per somma, 2 per domande, 3 per vettore" << '\n';
+	std::cout << "digita 1 per somma, 2 per domande, 3 per vettore, 4 per classe" << '\n';
 	int input = askNumber();
 	switch (input){
 		case 1: {
@@ -37,6 +41,11 @@ int main()
 				n = askNumber();
 			}
 			print_vect(vect);
+			break;
+		};
+		case 4: {
+			Persona p1 {askName(), askNumber()};
+			p1.print();
 			break;
 		}
 		
