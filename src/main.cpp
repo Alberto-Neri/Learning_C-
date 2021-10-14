@@ -2,24 +2,7 @@
 #include "ask_function.h"
 #include <iostream>
 #include <string>
-
-class Persona {
-	std::string m_nome {};
-	int m_eta {};
-
-	public:
-		Persona(std::string nome, int eta)
-		: m_nome {nome}, m_eta {eta}
-		{}
-		void print(){
-			std::cout << "ti chiami " << m_nome << " e hai " << m_eta << " anni\n";
-		}
-		Persona& setNome(std::string nome){
-			m_nome = nome;
-			return *this;
-		}
-
-};
+#include "Persona.h"
 
 int main()
 {
