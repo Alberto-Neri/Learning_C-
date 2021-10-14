@@ -14,6 +14,10 @@ class Persona {
 		void print(){
 			std::cout << "ti chiami " << m_nome << " e hai " << m_eta << " anni\n";
 		}
+		Persona& setNome(std::string nome){
+			m_nome = nome;
+			return *this;
+		}
 
 };
 
@@ -46,6 +50,7 @@ int main()
 		case 4: {
 			Persona p1 {askName(), askNumber()};
 			p1.print();
+			p1.setNome("fjehdh").setNome("pippo").print(); 
 			break;
 		}
 		
