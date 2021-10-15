@@ -4,6 +4,7 @@
 class Persona {  //definisco nell'header solo le funzioni "banali"
 	std::string m_nome {};
 	int m_eta {};
+	std::string m_prefColor{"rosso"};
 
 	public:
 		Persona(std::string nome, int eta)
@@ -14,5 +15,6 @@ class Persona {  //definisco nell'header solo le funzioni "banali"
 			return *this;
 		}
         void print();
+		friend void color(const Persona& p1); 
 };
 #endif

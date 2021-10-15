@@ -34,6 +34,7 @@ int main()
 			Persona p1 {askName(), askNumber()};
 			p1.print();
 			p1.setNome("fjehdh").setNome("pippo").print(); 
+			color(p1);
 			break;
 		}
 		
