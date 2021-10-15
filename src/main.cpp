@@ -32,8 +32,8 @@ int main()
 		};
 		case 4: {
 			Persona p1 {askName(), askNumber()};
-			p1.print();
-			p1.setNome("fjehdh").setNome("pippo").print(); 
+			std::cout << p1; 
+			std::cout << p1.setNome("fjehdh").setNome("pippo"); 
 			color(p1);
 			break;
 		}

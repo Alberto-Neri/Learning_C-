@@ -14,7 +14,8 @@ class Persona {  //definisco nell'header solo le funzioni "banali"
 			m_nome = nome;
 			return *this;
 		}
-        void print();
-		friend void color(const Persona& p1); 
+        /* void print(); */
+		friend void color(const Persona& p1); //prima friend function
+		friend std::ostream& operator<<(std::ostream& out, const Persona& p1); //overload << con friend function
 };
 #endif
