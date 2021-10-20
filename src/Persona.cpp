@@ -12,5 +12,5 @@ std::ostream& operator<<(std::ostream& out, const Persona& p1){
 }
 
 void color(const Persona& p1) {  //friend function
-	std::cout << "il tuo colore preferito e' " << p1.m_prefColor;
+	std::cout << "il tuo colore preferito e' " << p1.m_prefColor << '\n';
 }

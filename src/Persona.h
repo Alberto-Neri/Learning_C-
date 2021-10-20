@@ -9,7 +9,14 @@ class Persona {  //definisco nell'header solo le funzioni "banali"
 	public:
 		Persona(std::string nome, int eta)
 		: m_nome {nome}, m_eta {eta}
-		{}
+		{
+		}
+		Persona() = default;
+		Persona(int eta) 
+		: m_eta {eta}
+		{
+		} 
+		
 		Persona& setNome(std::string nome){
 			m_nome = nome;
 			return *this;

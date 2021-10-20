@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "Persona.h"
+#include "Calciatore.h"
 
 int main()
 {
@@ -35,6 +36,8 @@ int main()
 			std::cout << p1; 
 			std::cout << p1.setNome("fjehdh").setNome("pippo"); 
 			color(p1);
+			Calciatore c1 {6};
+			c1.printNumMaglia();
 			break;
 		}
 		
