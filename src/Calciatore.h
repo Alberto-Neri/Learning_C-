@@ -19,9 +19,16 @@ public:
     {
     }
 
-    void printNumMaglia(){
-        std::cout << m_num_maglia << '\n'; 
+    int getNumMaglia(){
+        return m_num_maglia;
     } 
+    
+    friend std::ostream& operator<<(std::ostream& out, const Calciatore& c){
+        out << static_cast<const Persona&>(c) 
+        << " sei un calciatore e il tuo numero e' " << c.m_num_maglia; 
+        return out; 
+    }
+ 
 };
 
 #endif

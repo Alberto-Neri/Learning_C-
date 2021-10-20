@@ -34,10 +34,10 @@ int main()
 		case 4: {
 			Persona p1 {askName(), askNumber()};
 			std::cout << p1; 
-			std::cout << p1.setNome("fjehdh").setNome("pippo"); 
-			color(p1);
-			Calciatore c1 {6};
-			c1.printNumMaglia();
+			//std::cout << p1.setNome("fjehdh").setNome("pippo"); 
+			//color(p1);
+			Calciatore c1 {6}; //default Persona constructor! 
+			std::cout << c1; 
 			break;
 		}
 		
