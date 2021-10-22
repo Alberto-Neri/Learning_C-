@@ -24,6 +24,6 @@ class Persona {  //definisco nell'header solo le funzioni "banali"
         
 		friend void color(const Persona& p1); //prima friend function
 		friend std::ostream& operator<<(std::ostream& out, const Persona& p1); //overload << con friend function
-		virtual std::string print();
+		virtual std::string print() = 0; //pure virtual function
 };
 #endif

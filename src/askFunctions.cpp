@@ -3,9 +3,8 @@
 #include "ask_function.h"
 #include <vector>
 
-int askNumber(){
-	std::string s {"inserisci un valore numerico:"}; 
-	std::cout << s << '\n';
+int askNumber(std::string& str){
+	std::cout << str << '\n';
 	int input {};
 	std::cin >> input;
 	return input; 

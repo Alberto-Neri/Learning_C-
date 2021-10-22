@@ -8,10 +8,11 @@
 int main()
 {
 	std::cout << "digita 1 per somma, 2 per domande, 3 per vettore, 4 per classe" << '\n';
-	int input = askNumber();
+	std::string str {"inserisci un valore numerico: "};
+	int input = askNumber(str);
 	switch (input){
 		case 1: {
-			std::cout << "somma int: "<< somma(askNumber(), askNumber()) << '\n';
+			std::cout << "somma int: "<< somma(askNumber(str), askNumber(str)) << '\n';
 			std::cout << "somma double: " <<somma(1.2, 4.2);
 			break;
 		};
@@ -23,24 +24,23 @@ int main()
 		case 3: {
 			std::vector<int> vect; 
 			std::cout << "Inserisci gli elementi del vettore uno alla volta, 0 per terminare\n";
-			int n {askNumber()};
+			int n {askNumber(str)};
 			while (n != 0){
 				vect.push_back(n);
-				n = askNumber();
+				n = askNumber(str);
 			}
 			print_vect(vect);
 			break;
 		};
 		case 4: {
-			Persona p1 {askName(), askNumber()};
-			std::cout << p1; 
+			/* Persona p1 {askName(), askNumber()};
+			std::cout << p1;  */
 			//std::cout << p1.setNome("fjehdh").setNome("pippo"); 
 			//color(p1);
-			Calciatore c1 {6}; //default Persona constructor! 
+			str = "Quanti anni hai? ";
+			Calciatore c1 {askName(), askNumber(str), 6}; 
 			std::cout << c1; 
 			
-			Persona& ref1 {p1};
-			std::cout << ref1.print();
 			Persona& ref2 {c1};
 			std::cout << ref2.print();
 			break;
