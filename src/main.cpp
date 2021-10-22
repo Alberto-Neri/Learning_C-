@@ -38,6 +38,11 @@ int main()
 			//color(p1);
 			Calciatore c1 {6}; //default Persona constructor! 
 			std::cout << c1; 
+			
+			Persona& ref1 {p1};
+			std::cout << ref1.print();
+			Persona& ref2 {c1};
+			std::cout << ref2.print();
 			break;
 		}
 		
