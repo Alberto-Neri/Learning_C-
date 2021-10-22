@@ -31,7 +31,7 @@ public:
 
     /* void print(); */
 
-    virtual std::string print(){
+    std::string print() override {
         return "sei un calciatore\n";
     }
  
