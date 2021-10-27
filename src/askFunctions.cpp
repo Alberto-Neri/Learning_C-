@@ -2,13 +2,20 @@
 #include <string>
 #include "ask_function.h"
 #include <vector>
+#include "NumberException.h"
 
 int askNumber(std::string& str){
 	std::cout << str << '\n';
 	int input {};
 	std::cin >> input;
+	
+	if (!std::cin){ //non ha inserito un int
+		std::cin.clear();
+		std::cin.ignore(256, '\n');
+		throw NumberException{"ERRORE: non hai inserito un numero intero!\n"};
+	}
 	return input; 
-}; 
+} 
 
 favorite_things ask_favorite_things(){
 	favorite_things ft {};
