@@ -7,6 +7,6 @@ int askNumber(std::string& str);
 favorite_things ask_favorite_things();
 void print_ft(const favorite_things& ft);
 void print_vect(const std::vector<int>& vect);
-std::string askName();
+std::string askString(std::string& str);
 
 #endif

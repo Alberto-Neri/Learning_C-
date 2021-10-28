@@ -1,6 +1,7 @@
 #include "somma.h"
 #include "ask_function.h"
 #include <iostream>
+#include <fstream>
 #include <string>
 #include "Persona.h"
 #include "Calciatore.h"
@@ -9,7 +10,7 @@
 int main()
 {
 	try {
-		std::cout << "digita 1 per somma, 2 per domande, 3 per vettore, 4 per classe" << '\n';
+		std::cout << "digita 1 per somma, 2 per domande, 3 per vettore, 4 per classe, 5 per lettura e scrittura file .txt" << '\n';
 		std::string str {"inserisci un valore numerico: "};
 		int input = askNumber(str);
 
@@ -36,17 +37,30 @@ int main()
 				break;
 			};
 			case 4: {
-				/* Persona p1 {askName(), askNumber()};
+				/* Persona p1 {askString("Come ti chiami? "), askNumber()};
 				std::cout << p1;  */
 				//std::cout << p1.setNome("fjehdh").setNome("pippo"); 
 				//color(p1);
 				str = "Quanti anni hai? ";
-				Calciatore c1 {askName(), askNumber(str), 6}; 
+				std::string str2 {"Come ti chiami? "};
+				Calciatore c1 {askString(str2), askNumber(str), 6}; 
 				std::cout << c1; 
 				
 				Persona& ref2 {c1};
 				std::cout << ref2.print();
 				break;
+			};
+			case 5: {
+				std::ifstream in_file {"read.txt"};
+				std::cout << "Ecco il contenuto del file:\n";
+				while (in_file) {
+					std::string str {};
+					std::getline(in_file, str);
+					std::cout << str << "\n";
+				}
+				std::ofstream out_file {"write.txt", std::ios::app};
+				std::string str2 {"Scrivi qualcosa:\n"};
+				out_file << askString(str2) << "\n";
 			}
 			
 		}

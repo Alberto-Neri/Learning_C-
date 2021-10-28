@@ -1,6 +1,7 @@
 #ifndef EXC
 #define EXC
 #include <string>
+#include <exception>
 
 
 class NumberException { //volendo derivo da std::exception

@@ -38,9 +38,8 @@ void print_vect(const std::vector<int>& vect){
 	} 
 }
 
-std::string askName(){
-	std::string s {"Come ti chiami? "}; 
-	std::cout << s;
+std::string askString(std::string& str){
+	std::cout << str;
 	std::string input {};
 	std::getline(std::cin >> std::ws, input);
 	return input; 
